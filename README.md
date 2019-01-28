@@ -3,7 +3,9 @@
 Matthew Yu
 C++ Program that generates images from Markov Chains.
 
-![Sunflower with a palette size of 10.](https://github.com/dimembermatt/Markov-Chain-Generator/blob/master/output/sunflower007_10bins.png)
+![Sunflower with a palette size of 10.](https://github.com/dimembermatt/Markov-Chain-Generator/blob/master/output/Sunflower007_10bins.png
+)
+
 
 ### Instructions (ubuntu/linux):
 1. With the binary markovGeneratorV3 and a /data folder with images in it (suggestion to use [Caltech's image datasets](http://www.vision.caltech.edu/Image_Datasets/Caltech101/))
