@@ -1,4 +1,28 @@
 ## markovGeneratorV3
+##### Jan 2019
+Matthew Yu
+C++ Program that generates images from Markov Chains.
+
+![Sunflower with a palette size of 10.](https://github.com/dimembermatt/ColorQuantization/blob/master/output/sunflower007_10bins.png)
+
+### Instructions (ubuntu/linux):
+1. With the binary markovGeneratorV3 and a /data folder with images in it (suggestion to use [Caltech's image datasets](http://www.vision.caltech.edu/Image_Datasets/Caltech101/))
+2. run ./markovGeneratorV3
+3. type a file in /data to use as the base (i.e. 'launch.png')  
+4. enter in a palette size (i.e. '10')
+5. enter image scaling (>= 1, rec is 1|2)
+6. Markov Chain picture outputs (time varies based on palette size, dataset size, and results may vary based on input image)!
+
+### OPTIONAL COMMANDS
+After generating the picture, OfApp accepts the following commands by keyboard:
+- _'s'_: saves the image under 'Markov_Chain_[i].jpg' (colors are inverted though for some reason)
+- _'r'_: reseeds the Markov Chain (but does not redo palette size)
+- _'c'_: returns the credits and exits the program (Program can also be exited by ctrl+c in the console or esc in the window).
+
+
+If you're interested at looking at the OF code for markovGeneratorV3 to make this program, please contact me.
+
+
 ##### Procedure:
 1. Build a bucket as the start of a palette.
 2. Given a directory of images, for each image:
@@ -85,7 +109,7 @@
     - Bucket::getIdx() - replaced O(n) linear probing with O(log n) binary search.
     - Point::<(), Point::>() - created more comparatory methods for Point class for binary search.
     - Pre/Post Mod ofApp::buildPalette() (85 images, 1.2MiB, palette size 3, scaling 1): 90s/6s, 93% faster.
-    
+
 - getColor optimization:
     - Bucket::getColor()|setColor() - set an internal Point color variable that is set by Bucket::setColor() and can be retrieved by Bucket::getColor().
     - set after Bucket::compressPalette(), reduces the amount of O(n) calculations per call of Bucket::getColor() to O(1).
